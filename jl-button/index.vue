@@ -1,6 +1,8 @@
 <template>
-  <div class="btn_wrap jl-button" @click.prevent="clicked" :style="styles" @mouseover="mouseOver" @mouseout="mouseLeave">
-    <i v-if="icon" :class="icon"></i>
+  <div class="btn_wrap" @click.prevent="clicked" :style="styles" 
+    @mouseover="mouseOver" @mouseout="mouseLeave"
+    :class="type">
+    <i v-if="icon" :class="`iconfont ${icon}`"></i>
     <slot></slot>
   </div>
 </template>
@@ -21,7 +23,7 @@ export default {
     },
     padding: {
       type: String,
-      default: '5px 12px'
+      default: '6px 12px'
     },
     border: {
       type: String,
@@ -91,22 +93,6 @@ export default {
       }
     },
     styleChange(){
-      switch (this.type){
-        case 'primary':
-          this.styles.backgroundColor = '#409eff';
-          break;
-        case 'success':
-          this.styles.backgroundColor = '#67c23a';
-          break;
-        case 'info':
-          this.styles.backgroundColor = '#909399';
-          break;
-        case 'danger':
-          this.styles.backgroundColor = '#f56c6c';
-          break;
-        case 'warning':
-          this.styles.backgroundColor = 'orange';
-      }
       if(this.bg_color){
         this.styles.backgroundColor = this.bg_color;
       }
@@ -162,5 +148,6 @@ export default {
     display: inline-block;
     border-radius: 4px;
     cursor: pointer;
+    line-height: 1;
   }
 </style>
