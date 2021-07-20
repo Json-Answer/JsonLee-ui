@@ -10,10 +10,10 @@ This component is mainly used for their usual development convenience, don't lik
 This component has just been developed and will continue to be updated
 
 欢迎提出建议和反馈<br>
-邮箱: 2622336659@qq.com / jsonlee1017@163.com
+邮箱: 2622336659@qq.com / jsonlee1017@163.com / 2270588502@qq.com
 
 ### 下载/Install
-`cd download-directory`
+`cd download-directory`<br>
 `git clone https://gitee.com/jsonlee_lee/json-lee-ui.git`
 
 ### 快速入手/Quick Start
@@ -54,8 +54,8 @@ This component has just been developed and will continue to be updated
 ###### 属性/Attributes
 | 属性 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ---- | ---- |
-| type | 类型(原生属性) | String | [原生属性][input_type] | text |
 | v-model | 绑定值 | String/Number | -- | -- |
+| type | 类型(原生属性) | String | [原生属性][input_type] | text |
 | maxlength | 最大长度(原生属性) | Number | -- | -- |
 | placeholder | 占位文本(原生属性) | String | -- | -- |
 | width | 输入框宽度 | String/Number(单位px) | -- | 100% |
@@ -84,3 +84,23 @@ This component has just been developed and will continue to be updated
 | enter | 按下回车时触发 | -- |
 
 [input_type]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types
+
+#### 选择框/Input
+###### 属性/Attributes
+| 属性 | 说明 | 类型 | 可选值 | 默认值 |
+| ---- | ---- | ---- | ---- | ---- |
+| :value.sync | 绑定值 | String/Number | -- | -- |
+| placeholder | 占位文本(原生属性) | String | -- | -- |
+| width | 选择框宽度 | String/Number(单位px) | -- | 260 |
+| height | 选择框高度 | String | -- | 2rem |
+| border_color | 边框颜色 | String | -- | #dcdfe6 |
+| on_border_color | 选择框高亮时边框颜色 | String | -- | #409eff |
+| filterable | 是否可搜索 | true/false | false |
+| icon | 收起图标 | String | -- | jl-icon-row-down |
+| on_icon | 展开图标 | String | -- | jl-icon-row-top |
+| options | 选项 | Array | -- | -- |
+
+###### 事件属性/Event
+| 事件名称 | 说明 | 回调参数 |
+| ---- | ---- | ---- |
+| change | 绑定值改变时触发 | -- |

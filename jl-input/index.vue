@@ -150,7 +150,9 @@ export default {
     this.propsDetail();
   },
   mounted() {
-    
+    document.addEventListener('click',function(e){
+      let div = e.target;
+    })
   },
   destroyed() {
     

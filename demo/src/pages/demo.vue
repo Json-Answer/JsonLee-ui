@@ -31,6 +31,8 @@
       @prefix_click="p_test"
       suffix_in="&#xe75b;"
       suffix=".com"></jl-input>
+    <jl-select :height="40" class="margin10" filterable
+      :options="options" :value.sync="selectValue" @change="valueChange"></jl-select>
   </div>
 </template>
 
@@ -39,6 +41,24 @@ export default {
   data() {
     return {
       value: '',
+      testSet: {
+        name: '',
+        age: 0
+      },
+      options: [{
+        value: 'first',
+        title: '怪兽'
+      },{
+        value: 'second',
+        title: '凹凸曼'
+      },{
+        value: 'third',
+        title: '张大仙'
+      },{
+        value: 'forth',
+        title: '妖怪'
+      }],
+      selectValue: ''
     }
   },
   created() {
@@ -48,6 +68,9 @@ export default {
     
   },
   methods: {
+    valueChange(){
+      console.log(this.selectValue);
+    },
     test(){
       console.log("默认");
     },
@@ -67,6 +90,12 @@ export default {
   destroyed() {
     
   },
+  filters: {
+
+  },
+  delete: {
+
+  }
 }
 </script>
 

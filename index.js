@@ -5,12 +5,14 @@ import JlButton from './jl-button'
 import JlInput from './jl-input'
 import JlSelect from './jl-select'
 import JlTable from './jl-table'
+import JlMain from './jl-main'
 
 const jlComponents = [
   {name: 'jl-button',use: JlButton},
   {name: 'jl-input',use: JlInput},
   {name: 'jl-select',use: JlSelect},
-  {name: 'jl-table',use: JlTable}
+  {name: 'jl-table',use: JlTable},
+  {name: 'jl-main',use: JlMain}
 ]
 
 jlComponents.forEach(item=>{
@@ -21,5 +23,6 @@ export default {
   JlButton,
   JlInput,
   JlSelect,
-  JlTable
+  JlTable,
+  JlMain
 }
